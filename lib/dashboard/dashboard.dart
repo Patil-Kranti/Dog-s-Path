@@ -30,6 +30,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         backgroundColor: Colors.blueGrey[900],
         actions: [
           IconButton(
+              tooltip: "Logout",
               icon: Icon(Icons.exit_to_app),
               onPressed: () async {
                 final facebooklogin = FacebookLogin();
@@ -39,7 +40,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => AuthPage()));
               }),
-          IconButton(icon: Icon(Icons.check), onPressed: getPathData),
         ],
       ),
       body: ListView.builder(
